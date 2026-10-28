@@ -111,13 +111,17 @@ export default function TechStackTicker() {
 
       </div>
 
-      {/* Infinite scrolling ticker (Clean, no Tailwind) */}
-      <div className="relative flex overflow-x-hidden pt-2 border-t border-slate-900">
+      {/* Infinite scrolling ticker with smooth edge fade and continuous loop */}
+      <div className="relative flex overflow-x-hidden pt-3 border-t border-slate-900">
+        {/* Soft edge gradient fades */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent z-10" />
+
         <div className="animate-marquee flex items-center gap-4 whitespace-nowrap py-2">
           {stack.concat(stack).map((item, idx) => (
             <div
               key={idx}
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 shadow-sm hover:border-slate-700 transition-colors"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 shadow-sm hover:border-slate-700 transition-colors flex-shrink-0"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-sky-400" />
               <span className="text-xs font-bold text-slate-200 font-sans">{item.name}</span>

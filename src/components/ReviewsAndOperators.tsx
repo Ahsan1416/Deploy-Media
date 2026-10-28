@@ -27,11 +27,11 @@ export default function ReviewsAndOperators() {
       metric: "4.2× Blended ROAS",
     },
     {
-      quote: "Their n8n automations hooked our high-intent lead forms directly to HubSpot in 1.2 seconds. We scaled profitable ad spend from $4K/mo to $90K/mo with a consistent 3.8x return.",
+      quote: "Their n8n automations hooked our high-intent lead forms directly to HubSpot in 1.2 seconds. We scaled profitable ad spend from $4K/mo to $50K/mo with a consistent 3.8x return.",
       author: "Marcus Vance",
       role: "Founder & CEO",
       company: "Apex Pipeline AI",
-      metric: "$4K ➔ $90K/mo Scale",
+      metric: "$4K ➔ $50K/mo Scale",
     },
   ];
 

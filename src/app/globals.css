@@ -142,3 +142,21 @@ body {
 .code-string { color: #34d399; }
 .code-variable { color: #fbbf24; }
 .code-comment { color: #64748b; font-style: italic; }
+
+/* Infinite Marquee Ticker */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

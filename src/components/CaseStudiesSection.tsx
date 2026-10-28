@@ -56,7 +56,7 @@ export default function CaseStudiesSection() {
       title: "Enterprise AI Workflow Software",
       market: "US Tech Corridor",
       stack: ["Next.js React App", "LinkedIn ABM", "n8n AI Agents"],
-      metricPrimary: "$4K ➔ $90K/mo",
+      metricPrimary: "$4K ➔ $50K/mo",
       metricLabel: "Profitable Ad Spend Scaled",
       metricSecondary: "-38% Cost Per Opportunity",
       desc: "Synced HubSpot closed-won deals directly back to LinkedIn Campaign Manager using n8n webhooks. Automated senior SDR alerts on Slack within 60 seconds of form submission.",
