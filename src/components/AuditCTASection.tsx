@@ -74,7 +74,7 @@ export default function AuditCTASection() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                Get a Free, No-BS Technical &amp; Growth Tear-Down.
+                Get a Free Technical &amp; Growth Tear-Down.
               </h2>
 
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">

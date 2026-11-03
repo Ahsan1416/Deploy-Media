@@ -72,7 +72,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              Free, no-bs, 30 minutes with a senior operator. We will review your web speed, campaign architecture, and tracking bottlenecks with zero sales pressure.
+              Free 30 minutes with a senior operator. We will review your web speed, campaign architecture, and tracking bottlenecks with zero sales pressure.
             </p>
           </div>
         </div>

@@ -219,15 +219,12 @@ export default function Navbar() {
 
             <Link
               href="/audit"
-              className={`px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors flex items-center gap-1.5 ${pathname === "/audit"
+              className={`px-3.5 py-2 text-sm font-semibold rounded-lg transition-colors ${pathname === "/audit"
                 ? "text-sky-600 bg-sky-50"
                 : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
                 }`}
             >
-              <span>Free Audit</span>
-              <span className="text-[10px] bg-sky-100 text-sky-700 font-bold px-1.5 py-0.5 rounded">
-                NO-BS
-              </span>
+              Free Audit
             </Link>
 
             <Link
