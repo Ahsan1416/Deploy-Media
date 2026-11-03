@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeployMedia — Services & Capabilities Guide</title>
+  <title>DeployMedia — Official Services Brochure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,6 @@
       --slate-100: #f8fafc;
       --emerald-600: #059669;
       --emerald-50: #ecfdf5;
-      --amber-500: #f59e0b;
     }
 
     * {
@@ -34,11 +33,11 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--slate-900);
       background-color: #f1f5f9;
-      line-height: 1.6;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Top Sticky Action Bar */
+    /* Web Top Bar */
     .top-action-bar {
       position: sticky;
       top: 0;
@@ -51,13 +50,11 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--slate-800);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
     .brand-title {
       font-weight: 800;
       font-size: 1.05rem;
-      letter-spacing: -0.3px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -68,7 +65,6 @@
       height: 10px;
       background: #38bdf8;
       border-radius: 50%;
-      box-shadow: 0 0 10px #38bdf8;
     }
 
     .btn-print {
@@ -83,383 +79,387 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
     }
 
-    .btn-print:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
-    }
-
-    /* Main Container */
+    /* Brochure Container (Web View) */
     .brochure-container {
-      max-width: 960px;
-      margin: 28px auto 48px;
+      max-width: 900px;
+      margin: 24px auto;
       background: white;
-      box-shadow: 0 12px 48px rgba(0,0,0,0.06);
-      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--slate-200);
     }
 
+    /* Page Definition for Print & Display */
+    .brochure-page {
+      padding: 32px 40px;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page-separator {
+      height: 16px;
+      background: #e2e8f0;
+      border-top: 1px dashed #cbd5e1;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+
     /* Header Cover */
-    .cover-header {
-      background: linear-gradient(145deg, #020617 0%, #0f172a 60%, #032b44 100%);
+    .header-box {
+      background: linear-gradient(145deg, #020617 0%, #0f172a 70%, #032b44 100%);
       color: white;
-      padding: 56px 56px 48px;
-      position: relative;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin-bottom: 18px;
     }
 
-    .cover-title {
-      font-size: 2.6rem;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
-    }
-
-    .cover-title span {
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .cover-summary {
-      font-size: 1.1rem;
-      color: #94a3b8;
-      max-width: 780px;
-      line-height: 1.6;
-    }
-
-    /* Section Styling */
-    .section-wrap {
-      padding: 44px 56px;
-      border-bottom: 1px solid var(--slate-200);
-    }
-
-    .section-wrap:last-child {
-      border-bottom: none;
-    }
-
-    .section-tag {
+    .brand-eyebrow {
       font-size: 0.72rem;
       font-weight: 800;
-      color: var(--primary);
+      color: #38bdf8;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       margin-bottom: 6px;
     }
 
-    .section-title {
-      font-size: 1.75rem;
+    .header-title {
+      font-size: 1.95rem;
       font-weight: 800;
-      color: var(--slate-950);
+      line-height: 1.15;
       letter-spacing: -0.5px;
       margin-bottom: 8px;
     }
 
-    .section-desc {
-      font-size: 0.98rem;
-      color: var(--slate-600);
-      max-width: 760px;
-      line-height: 1.6;
-      margin-bottom: 28px;
+    .header-title span {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    /* Highlight Banner for Saudi Arabia & GCC */
+    .header-desc {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Saudi Arabia Banner */
     .gcc-banner {
-      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+      background: #ecfdf5;
       border: 1.5px solid #a7f3d0;
-      border-radius: 14px;
-      padding: 20px 24px;
-      margin-bottom: 8px;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 18px;
       display: flex;
-      gap: 16px;
+      gap: 14px;
       align-items: flex-start;
     }
 
     .gcc-banner-icon {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       line-height: 1;
       flex-shrink: 0;
     }
 
     .gcc-banner-title {
-      font-size: 1rem;
+      font-size: 0.92rem;
       font-weight: 800;
       color: #065f46;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .gcc-banner-text {
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       color: #047857;
-      line-height: 1.55;
+      line-height: 1.45;
     }
 
-    /* Service Cards (Clean & Simple) */
-    .services-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .service-box {
-      background: #ffffff;
-      border: 1.5px solid var(--slate-200);
-      border-radius: 16px;
-      padding: 26px 28px;
-      transition: all 0.2s;
-    }
-
-    .service-box-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    /* Section Headings */
+    .section-header {
       margin-bottom: 12px;
     }
 
-    .service-box-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--primary-light);
+    .section-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 800;
       color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.35rem;
-      flex-shrink: 0;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
-    .service-box-title {
-      font-size: 1.25rem;
+    .section-title {
+      font-size: 1.35rem;
       font-weight: 800;
       color: var(--slate-950);
-      line-height: 1.2;
+      letter-spacing: -0.3px;
     }
 
-    .service-box-badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      background: #e0f2fe;
-      padding: 3px 9px;
-      border-radius: 6px;
-      margin-top: 4px;
-    }
-
-    .service-box-desc {
-      font-size: 0.94rem;
-      color: var(--slate-700);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .features-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px 20px;
-    }
-
-    .features-list li {
-      font-size: 0.86rem;
-      color: var(--slate-600);
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-
-    .features-list li::before {
-      content: '✔';
-      color: var(--emerald-600);
-      font-weight: 800;
-      font-size: 0.85rem;
-      margin-top: 1px;
-    }
-
-    /* Next.js Special Feature Box */
-    .nextjs-callout {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: white;
-      border-radius: 14px;
-      padding: 22px 24px;
-      margin-top: 16px;
-      border: 1px solid var(--slate-700);
-    }
-
-    .nextjs-callout-title {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #38bdf8;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .nextjs-callout-text {
-      font-size: 0.88rem;
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-
-    .nextjs-points {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 16px;
+    .section-desc {
       font-size: 0.82rem;
-      color: #94a3b8;
+      color: var(--slate-600);
+      margin-top: 2px;
     }
 
-    .nextjs-points div {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nextjs-points div::before {
-      content: '✦';
-      color: #38bdf8;
-    }
-
-    /* 2-Column Grid for Marketing & Ads */
-    .grid-2col {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .card-mini {
+    /* Service Cards */
+    .service-card {
       background: #ffffff;
       border: 1.5px solid var(--slate-200);
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
     }
 
-    .card-mini-title {
+    .service-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .service-card-title {
       font-size: 1.05rem;
       font-weight: 800;
       color: var(--slate-950);
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 8px;
     }
 
-    .card-mini-desc {
-      font-size: 0.86rem;
+    .service-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: #e0f2fe;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--slate-700);
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .feature-bullets {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 16px;
+    }
+
+    .feature-bullets li {
+      font-size: 0.76rem;
       color: var(--slate-600);
-      line-height: 1.55;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
     }
 
-    /* Workflow Steps (How We Work) */
-    .process-grid {
+    .feature-bullets li::before {
+      content: '✔';
+      color: var(--emerald-600);
+      font-weight: 800;
+      font-size: 0.76rem;
+    }
+
+    /* Next.js Special Feature Box */
+    .nextjs-spotlight {
+      background: #0f172a;
+      color: white;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 8px;
+      border: 1px solid var(--slate-700);
+    }
+
+    .nextjs-spotlight-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .nextjs-spotlight-text {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    .nextjs-grid {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 12px;
+      font-size: 0.74rem;
+      color: #94a3b8;
+    }
+
+    .nextjs-grid div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nextjs-grid div::before {
+      content: '✦';
+      color: #38bdf8;
+    }
+
+    /* 2x2 Grid for Ads & Marketing */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .ad-card {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .ad-card-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--slate-950);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .ad-card-desc {
+      font-size: 0.78rem;
+      color: var(--slate-600);
+      line-height: 1.4;
+    }
+
+    /* Workflow 4 Steps */
+    .process-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 10px;
+      margin-bottom: 16px;
     }
 
-    .process-card {
+    .process-box {
       background: var(--slate-100);
       border: 1px solid var(--slate-200);
-      border-radius: 12px;
-      padding: 18px;
+      border-radius: 10px;
+      padding: 12px;
     }
 
-    .process-step-num {
-      width: 26px;
-      height: 26px;
+    .process-num {
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background: var(--primary);
       color: white;
       font-weight: 800;
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
-    .process-step-title {
-      font-size: 0.92rem;
+    .process-title {
+      font-size: 0.84rem;
       font-weight: 800;
       color: var(--slate-950);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
-    .process-step-desc {
-      font-size: 0.78rem;
+    .process-desc {
+      font-size: 0.72rem;
       color: var(--slate-600);
-      line-height: 1.45;
+      line-height: 1.35;
     }
 
-    /* Back Cover & Contact */
-    .cover-footer {
+    /* Footer Banner */
+    .footer-box {
       background: var(--slate-950);
       color: white;
-      padding: 44px 56px;
+      padding: 20px 28px;
+      border-radius: 12px;
       text-align: center;
     }
 
-    .cover-footer-title {
-      font-size: 1.85rem;
+    .footer-title {
+      font-size: 1.35rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
     }
 
-    .cover-footer-desc {
-      font-size: 0.95rem;
+    .footer-desc {
+      font-size: 0.8rem;
       color: #94a3b8;
-      max-width: 580px;
-      margin: 0 auto 24px;
+      max-width: 540px;
+      margin: 0 auto 12px;
     }
 
-    .contact-row {
+    .footer-contacts {
       display: flex;
       justify-content: center;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
     }
 
-    .contact-item {
+    .footer-pill {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 8px 18px;
+      padding: 6px 14px;
       border-radius: 9999px;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 600;
       color: #f1f5f9;
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
-    .cover-footer-meta {
-      font-size: 0.72rem;
-      color: #64748b;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 18px;
+    .page-footer-meta {
+      font-size: 0.68rem;
+      color: var(--slate-400);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid var(--slate-200);
     }
 
-    /* Print Styles */
+    /* PRINT RULES FOR EXACT 2 PAGES - ZERO BLANK SPACES */
     @media print {
-      body {
-        background: white;
-        color: black;
+      @page {
+        size: A4 portrait;
+        margin: 6mm 10mm;
       }
-      .top-action-bar {
+
+      body {
+        background: white !important;
+        color: black !important;
+      }
+
+      .top-action-bar, .page-separator {
         display: none !important;
       }
+
       .brochure-container {
         max-width: 100% !important;
         margin: 0 !important;
@@ -467,53 +467,56 @@
         border: none !important;
         border-radius: 0 !important;
       }
-      .section-wrap {
-        padding: 28px 36px !important;
-        page-break-inside: avoid;
+
+      .brochure-page {
+        padding: 0 !important;
+        height: 284mm !important;
+        max-height: 284mm !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        overflow: hidden !important;
       }
-      .page-break {
-        page-break-before: always;
+
+      .page-break-after {
+        page-break-after: always !important;
+        break-after: page !important;
       }
-      .cover-header, .cover-footer {
+
+      .header-box {
         background: #020617 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      .nextjs-callout {
+
+      .nextjs-spotlight {
         background: #0f172a !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
+
       .gcc-banner {
         background: #ecfdf5 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
+
+      .footer-box {
+        background: #020617 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
       a {
         text-decoration: none !important;
         color: inherit !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .section-wrap {
-        padding: 32px 20px;
-      }
-      .cover-header, .cover-footer {
-        padding: 36px 20px;
-      }
-      .features-list, .grid-2col, .process-grid, .nextjs-points {
-        grid-template-columns: 1fr;
-      }
-      .cover-title {
-        font-size: 1.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sticky Top Bar (Hidden in Print) -->
+  <!-- Web Top Bar -->
   <div class="top-action-bar">
     <div class="brand-title">
       <span class="brand-dot"></span>
@@ -529,286 +532,254 @@
 
   <div class="brochure-container">
 
-    <!-- COVER / HEADER -->
-    <header class="cover-header">
-      <h1 class="cover-title">
-        High-Quality <span>Websites & Apps,</span><br />
-        Paid Marketing & <span>Smart Automations.</span>
-      </h1>
-      <p class="cover-summary">
-        DeployMedia builds modern websites, runs revenue-generating ad campaigns, and automates daily business tasks. We focus on clean craftsmanship, smooth user experience, and real business results for our clients.
-      </p>
-    </header>
+    <!-- ================= PAGE 1 ================= -->
+    <div class="brochure-page page-break-after">
+      <div>
+        <!-- Header -->
+        <header class="header-box">
+          <div class="brand-eyebrow">DeployMedia · Digital Agency &amp; Systems</div>
+          <h1 class="header-title">
+            High-Quality <span>Websites &amp; Apps,</span><br />
+            Paid Marketing &amp; <span>Smart Automations.</span>
+          </h1>
+          <p class="header-desc">
+            We build modern websites, run high-converting ad campaigns, and automate daily business tasks. We focus on clean craftsmanship, smooth user experience, and real business results.
+          </p>
+        </header>
 
-    <!-- SAUDI ARABIA & GCC REGIONAL EXPERTISE (MENTIONED FIRST) -->
-    <section class="section-wrap" style="background: #fafcfb;">
-      <div class="gcc-banner">
-        <div class="gcc-banner-icon">🇸🇦</div>
-        <div>
-          <div class="gcc-banner-title">
-            Specialized for Saudi Arabia (KSA) & the GCC Market
-          </div>
-          <div class="gcc-banner-text">
-            We build websites and online stores customized specifically for businesses in <strong>Riyadh, Jeddah, Dammam, and across the UAE</strong>. This includes complete integration with local payment gateways (<strong>Mada, Apple Pay, Tabby, Tamara, STC Pay</strong>), local courier shipping (SMSA, Aramex), VAT compliance, and flawless Arabic & English bilingual design.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: WEBSITES & WEB APPLICATION DEVELOPMENT -->
-    <section class="section-wrap">
-      <div class="section-tag">Service Area 01</div>
-      <h2 class="section-title">Website & Web Application Development</h2>
-      <p class="section-desc">
-        We create clean, modern, and reliable websites tailored to your brand. Everything we build is properly crafted to look stunning on mobile phones, tablets, and computers.
-      </p>
-
-      <div class="services-stack">
-
-        <!-- WordPress & Elementor Pro -->
-        <div class="service-box">
-          <div class="service-box-header">
-            <div class="service-box-icon">🌐</div>
-            <div>
-              <div class="service-box-title">WordPress & Elementor Development</div>
-              <span class="service-box-badge">Beautiful & Easy to Manage</span>
+        <!-- Saudi Arabia & GCC Banner (Mentioned First) -->
+        <div class="gcc-banner">
+          <div class="gcc-banner-icon">🇸🇦</div>
+          <div>
+            <div class="gcc-banner-title">
+              Specialized for Saudi Arabia (KSA) &amp; the GCC Market
+            </div>
+            <div class="gcc-banner-text">
+              We build websites and online stores customized specifically for businesses in <strong>Riyadh, Jeddah, Dammam, and the UAE</strong>. Includes full integration with local payment gateways (<strong>Mada, Apple Pay, Tabby, Tamara, STC Pay</strong>), local courier shipping (SMSA, Aramex), VAT compliance, and flawless Arabic &amp; English bilingual design.
             </div>
           </div>
-          <p class="service-box-desc">
-            We design custom, modern WordPress websites using Elementor. We set it up properly so that your own team can easily update text, change images, and add new pages with simple drag-and-drop tools, without needing to hire a programmer every time.
+        </div>
+
+        <!-- Section 1: Websites & Web Apps -->
+        <div class="section-header">
+          <div class="section-eyebrow">Service Area 01</div>
+          <h2 class="section-title">Website &amp; Web Application Development</h2>
+          <p class="section-desc">
+            Clean, modern, and reliable platforms crafted properly to look stunning on mobile phones, tablets, and computers.
           </p>
-          <ul class="features-list">
-            <li>Custom visual design matching your exact brand colors and logo.</li>
-            <li>Mobile-friendly layout that looks perfect on every phone.</li>
-            <li>Easy-to-use admin dashboard for your team.</li>
-            <li>Contact forms connected directly to your email and phone.</li>
+        </div>
+
+        <!-- WordPress & Elementor Card -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-card-title">
+              <span>🌐</span> WordPress &amp; Elementor Development
+            </div>
+            <span class="service-badge">Easy to Manage</span>
+          </div>
+          <p class="service-card-desc">
+            Custom, branded WordPress websites configured properly so your team can easily update copy, replace images, and create new pages using simple drag-and-drop tools, with zero coding required.
+          </p>
+          <ul class="feature-bullets">
+            <li>Custom design matching your exact brand identity</li>
+            <li>Mobile-first layout that looks perfect on every phone</li>
+            <li>Easy-to-use visual dashboard for your marketing team</li>
+            <li>Contact forms connected directly to your email and phone</li>
           </ul>
         </div>
 
-        <!-- Next.js & React (Special Spotlight on Next.js) -->
-        <div class="service-box">
-          <div class="service-box-header">
-            <div class="service-box-icon">⚡</div>
-            <div>
-              <div class="service-box-title">Next.js & React Web Applications</div>
-              <span class="service-box-badge">World-Class Modern Technology</span>
+        <!-- Next.js & React Card (Spotlight) -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-card-title">
+              <span>⚡</span> Next.js &amp; React Web Applications
             </div>
+            <span class="service-badge">World-Class Tech</span>
           </div>
-          <p class="service-box-desc">
-            For businesses that want the most advanced, top-tier technology available today. Next.js is the exact same modern framework used by industry giants like Netflix, Uber, Nike, and TikTok for their web platforms.
+          <p class="service-card-desc">
+            For businesses wanting top-tier modern technology. Next.js is the exact framework used by industry leaders like Netflix, Uber, Nike, and TikTok for their high-traffic platforms.
           </p>
-
-          <!-- Next.js Special Advantages -->
-          <div class="nextjs-callout">
-            <div class="nextjs-callout-title">
+          <div class="nextjs-spotlight">
+            <div class="nextjs-spotlight-title">
               ⭐ What Makes Next.js So Special for Your Business?
             </div>
-            <div class="nextjs-callout-text">
-              Ordinary websites refresh and reload every time you click a page. <strong>Next.js makes your website feel like a mobile app:</strong> page transitions are instant, screens never flicker, and the site never gets stuck or heavy over time.
+            <div class="nextjs-spotlight-text">
+              Ordinary websites reload on every click. <strong>Next.js makes your site feel like a mobile app:</strong> page transitions are instant, screens never flicker, and the site never gets stuck or heavy over time.
             </div>
-            <div class="nextjs-points">
-              <div><strong>Instant Page Opening:</strong> Zero waiting or lagging for visitors.</div>
-              <div><strong>Google SEO Favorite:</strong> Google ranks Next.js sites higher because of clean code.</div>
-              <div><strong>Bank-Grade Security:</strong> No plugins that can be hacked or broken.</div>
-              <div><strong>Never Outdated:</strong> Built on modern standards that will last for years.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- E-Commerce Stores (Shopify, WooCommerce & Zid) -->
-        <div class="service-box">
-          <div class="service-box-header">
-            <div class="service-box-icon">🛍️</div>
-            <div>
-              <div class="service-box-title">E-Commerce Online Stores</div>
-              <span class="service-box-badge">Built for Selling Products</span>
+            <div class="nextjs-grid">
+              <div><strong>Instant Page Opening:</strong> Zero loading delay for visitors.</div>
+              <div><strong>Google SEO Favorite:</strong> Clean code ranks higher in search results.</div>
+              <div><strong>Bank-Grade Security:</strong> No fragile plugins that can crash.</div>
+              <div><strong>Future-Proof:</strong> Modern standards that stay fast for years.</div>
             </div>
           </div>
-          <p class="service-box-desc">
-            We build online shopping stores on Shopify, WooCommerce, and Zid. We optimize the entire buying journey—from product browsing to simple 1-click checkout—so customers complete their purchases without confusion.
-          </p>
-          <ul class="features-list">
-            <li>Saudi Arabia payments: Mada, Tabby, Tamara & Apple Pay.</li>
-            <li>Simple and clean checkout page with zero confusing steps.</li>
-            <li>Automatic inventory management and invoice generation.</li>
-            <li>Automatic order notification sent to your warehouse or team.</li>
-          </ul>
         </div>
 
-      </div>
-    </section>
-
-    <!-- SECTION 2: DIGITAL MARKETING & PAID ADVERTISING -->
-    <section class="section-wrap page-break">
-      <div class="section-tag">Service Area 02</div>
-      <h2 class="section-title">Paid Advertising & Digital Marketing</h2>
-      <p class="section-desc">
-        We manage advertising campaigns on Google, Meta, and LinkedIn designed to bring real customers and phone inquiries to your business, not just empty clicks or likes.
-      </p>
-
-      <div class="grid-2col">
-        <!-- Google Ads -->
-        <div class="card-mini">
-          <div class="card-mini-title">
-            <span>🔍</span> Google Ads (Search & Shopping)
-          </div>
-          <p class="card-mini-desc">
-            When people in your city or target market search Google for the exact products or services you provide, your business appears right at the top. You only pay when interested people click.
-          </p>
-        </div>
-
-        <!-- Meta Ads -->
-        <div class="card-mini">
-          <div class="card-mini-title">
-            <span>📱</span> Meta Ads (Instagram & Facebook)
-          </div>
-          <p class="card-mini-desc">
-            Eye-catching image and video advertisements shown directly to people who match your ideal customer profile (by age, interests, location, and shopping habits).
-          </p>
-        </div>
-
-        <!-- LinkedIn Ads -->
-        <div class="card-mini">
-          <div class="card-mini-title">
-            <span>💼</span> LinkedIn B2B Advertising
-          </div>
-          <p class="card-mini-desc">
-            Show ads directly to company owners, managers, CEOs, and corporate procurement directors. Perfect for B2B companies looking for corporate contracts and wholesale orders.
-          </p>
-        </div>
-
-        <!-- High-Converting Landing Pages -->
-        <div class="card-mini">
-          <div class="card-mini-title">
-            <span>🎯</span> Focused Landing Pages
-          </div>
-          <p class="card-mini-desc">
-            Dedicated single-page sales funnels created specifically for your ad campaigns. They remove all distractions and guide the visitor to make a phone call or submit their details.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: AUTOMATION & ACCURATE TRACKING -->
-    <section class="section-wrap">
-      <div class="section-tag">Service Area 03</div>
-      <h2 class="section-title">Smart Automations & Accurate Tracking</h2>
-      <p class="section-desc">
-        We connect your website with your daily communication tools so your team saves hours of manual work and never loses a customer.
-      </p>
-
-      <div class="services-stack">
-        <!-- Automation -->
-        <div class="service-box">
-          <div class="service-box-header">
-            <div class="service-box-icon">🤖</div>
-            <div>
-              <div class="service-box-title">Smart Lead & WhatsApp Automations</div>
-              <span class="service-box-badge">Zero Manual Copy-Paste</span>
+        <!-- E-Commerce Stores Card -->
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-card-title">
+              <span>🛍️</span> E-Commerce Online Stores (Shopify, WooCommerce, Zid)
             </div>
+            <span class="service-badge">Built for Sales</span>
           </div>
-          <p class="service-box-desc">
-            The very second a customer submits their information on your website, our automated system instantly sends a WhatsApp or phone notification directly to your salesperson. An instant confirmation message is also sent to the customer so no inquiries are delayed or lost.
+          <p class="service-card-desc">
+            Complete online shopping stores optimized for a frictionless customer buying experience. Customers can browse products easily, pay with local cards, and receive automatic order tracking.
           </p>
-          <ul class="features-list">
-            <li>Instant WhatsApp or Slack notification to your sales team.</li>
-            <li>Automatic lead entry into Google Sheets, Excel, or your CRM.</li>
-            <li>Automated reminder messages to reduce missed appointments.</li>
-            <li>Saves your staff hours of manual data entry every week.</li>
-          </ul>
-        </div>
-
-        <!-- Tracking & Analytics -->
-        <div class="service-box">
-          <div class="service-box-header">
-            <div class="service-box-icon">📊</div>
-            <div>
-              <div class="service-box-title">Accurate Sales Tracking & Reporting</div>
-              <span class="service-box-badge">Know Where Your Money Goes</span>
-            </div>
-          </div>
-          <p class="service-box-desc">
-            We set up complete tracking so you can see crystal-clear reports showing which ad brought which phone call, which campaign generated real orders, and which campaigns should be turned off to save budget.
-          </p>
-          <ul class="features-list">
-            <li>Accurate tracking of every phone call, WhatsApp click, and form.</li>
-            <li>Clear, simple weekly reports showing results in straightforward language.</li>
-            <li>No wasted ad budget on ads that aren't generating sales.</li>
-            <li>Full setup of Google Analytics and Meta conversion tracking.</li>
+          <ul class="feature-bullets">
+            <li>Saudi Arabia payments: Mada, Tabby, Tamara &amp; Apple Pay</li>
+            <li>Simple, clean checkout page with zero confusing steps</li>
+            <li>Automatic inventory management and digital invoice generation</li>
+            <li>Instant order notifications sent to your team or warehouse</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- SECTION 4: HOW WE WORK (SIMPLE & HASSLE-FREE) -->
-    <section class="section-wrap">
-      <div class="section-tag">Work Process</div>
-      <h2 class="section-title">How We Work With You</h2>
-      <p class="section-desc">
-        A straightforward, collaborative process where you always know what is being created.
-      </p>
-
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="process-step-num">1</div>
-          <div class="process-step-title">Discussion & Goals</div>
-          <div class="process-step-desc">
-            We listen to your business goals, target customers, and what you want your website or ads to achieve.
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="process-step-num">2</div>
-          <div class="process-step-title">Custom Plan</div>
-          <div class="process-step-desc">
-            We provide a clear, simple plan detailing design direction, features, and transparent pricing.
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="process-step-num">3</div>
-          <div class="process-step-title">Proper Creation</div>
-          <div class="process-step-desc">
-            We build the website, setup automations, and configure campaigns with thorough quality checks.
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="process-step-num">4</div>
-          <div class="process-step-title">Launch & Support</div>
-          <div class="process-step-desc">
-            We launch everything smoothly, train your team, and provide continuous support and monitoring.
-          </div>
-        </div>
+      <!-- Page 1 Footer Meta -->
+      <div class="page-footer-meta">
+        <div>DeployMedia · Capability &amp; Services Brochure</div>
+        <div>Page 1 of 2</div>
       </div>
-    </section>
+    </div>
 
-    <!-- BACK COVER & CONTACT -->
-    <footer class="cover-footer">
-      <h2 class="cover-footer-title">
-        Let’s Build Something Great Together
-      </h2>
-      <p class="cover-footer-desc">
-        Whether you need a new website, a custom online store for Saudi Arabia & the GCC, or profitable marketing campaigns, we are here to help.
-      </p>
+    <!-- Web View Separator -->
+    <div class="page-separator"></div>
 
-      <div class="contact-row">
-        <a class="contact-item" href="https://deploy-media.vercel.app/" target="_blank">
-          🌐 deploy-media.vercel.app
-        </a>
-        <a class="contact-item" href="mailto:ahsanirfan141614@gmail.com">
-          ✉️ ahsanirfan141614@gmail.com
-        </a>
-        <a class="contact-item" href="https://deploy-media.vercel.app/contact" target="_blank">
-          📅 Book a Consultation Call
-        </a>
+    <!-- ================= PAGE 2 ================= -->
+    <div class="brochure-page">
+      <div>
+        <!-- Section 2: Paid Ads & Digital Marketing -->
+        <div class="section-header">
+          <div class="section-eyebrow">Service Area 02</div>
+          <h2 class="section-title">Paid Advertising &amp; Digital Marketing</h2>
+          <p class="section-desc">
+            Targeted advertising campaigns designed to generate paying customers and qualified inquiries, not empty clicks.
+          </p>
+        </div>
+
+        <div class="grid-2x2">
+          <div class="ad-card">
+            <div class="ad-card-title"><span>🔍</span> Google Ads (Search &amp; Shopping)</div>
+            <p class="ad-card-desc">
+              When prospective clients search on Google for your exact services or products, your business appears at the top. You only pay when interested buyers click.
+            </p>
+          </div>
+          <div class="ad-card">
+            <div class="ad-card-title"><span>📱</span> Meta Ads (Instagram &amp; Facebook)</div>
+            <p class="ad-card-desc">
+              Eye-catching video and image advertisements shown directly to your ideal customer profile based on their interests, location, and buying behaviors.
+            </p>
+          </div>
+          <div class="ad-card">
+            <div class="ad-card-title"><span>💼</span> LinkedIn B2B Advertising</div>
+            <p class="ad-card-desc">
+              Target company owners, CEOs, directors, and purchasing managers directly. Ideal for corporate contracts, high-ticket services, and wholesale business.
+            </p>
+          </div>
+          <div class="ad-card">
+            <div class="ad-card-title"><span>🎯</span> Focused Landing Pages</div>
+            <p class="ad-card-desc">
+              Dedicated single-page sales funnels created specifically for your ad campaigns, guiding incoming traffic directly toward making a call or submitting an inquiry.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 3: Automations & Tracking -->
+        <div class="section-header">
+          <div class="section-eyebrow">Service Area 03</div>
+          <h2 class="section-title">Smart Automations &amp; Accurate Tracking</h2>
+          <p class="section-desc">
+            Eliminating manual repetitive tasks so your team responds instantly and never loses an interested customer.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-card-title"><span>🤖</span> Smart Lead &amp; WhatsApp Automations</div>
+            <span class="service-badge">Zero Missed Leads</span>
+          </div>
+          <p class="service-card-desc">
+            The moment a customer submits a form on your website, our system sends a WhatsApp or phone notification directly to your salesperson, while sending an immediate confirmation to the customer. No delays, no spreadsheets.
+          </p>
+          <ul class="feature-bullets">
+            <li>Instant WhatsApp/Slack alert to your sales reps</li>
+            <li>Automatic lead capture into Google Sheets, Excel, or CRM</li>
+            <li>Automated reminder messages to prevent missed calls</li>
+            <li>Saves your staff hours of manual data entry every week</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="service-card-title"><span>📊</span> Accurate Sales Tracking &amp; Reporting</div>
+            <span class="service-badge">Clear Insights</span>
+          </div>
+          <p class="service-card-desc">
+            Complete conversion tracking setup showing exactly which ad generated which phone call, WhatsApp chat, or online order. Unprofitable ads are stopped, protecting your budget.
+          </p>
+          <ul class="feature-bullets">
+            <li>Track every phone call, WhatsApp click, and form accurately</li>
+            <li>Clear weekly reports showing results in straightforward language</li>
+            <li>No wasted ad budget on underperforming campaigns</li>
+            <li>Full setup of Google Analytics and Meta conversion tracking</li>
+          </ul>
+        </div>
+
+        <!-- Work Process -->
+        <div class="section-header" style="margin-top: 14px;">
+          <div class="section-eyebrow">Work Process</div>
+          <h2 class="section-title" style="font-size: 1.15rem;">How We Work With You</h2>
+        </div>
+
+        <div class="process-row">
+          <div class="process-box">
+            <div class="process-num">1</div>
+            <div class="process-title">Discussion</div>
+            <div class="process-desc">Understanding your goals and target audience.</div>
+          </div>
+          <div class="process-box">
+            <div class="process-num">2</div>
+            <div class="process-title">Custom Plan</div>
+            <div class="process-desc">Clear roadmap, design direction, and pricing.</div>
+          </div>
+          <div class="process-box">
+            <div class="process-num">3</div>
+            <div class="process-title">Proper Build</div>
+            <div class="process-desc">Thorough creation and quality testing.</div>
+          </div>
+          <div class="process-box">
+            <div class="process-num">4</div>
+            <div class="process-title">Launch &amp; Support</div>
+            <div class="process-desc">Smooth deployment, team training, and support.</div>
+          </div>
+        </div>
+
+        <!-- Footer / Contact Box -->
+        <footer class="footer-box">
+          <h3 class="footer-title">Let’s Build Something Great Together</h3>
+          <p class="footer-desc">
+            Whether you need a new website, an e-commerce store for Saudi Arabia &amp; the GCC, or profitable marketing campaigns, we are here to help.
+          </p>
+          <div class="footer-contacts">
+            <a class="footer-pill" href="https://deploy-media.vercel.app/" target="_blank">
+              🌐 deploy-media.vercel.app
+            </a>
+            <a class="footer-pill" href="mailto:ahsanirfan141614@gmail.com">
+              ✉️ ahsanirfan141614@gmail.com
+            </a>
+            <a class="footer-pill" href="https://deploy-media.vercel.app/contact" target="_blank">
+              📅 Book Consultation Call
+            </a>
+          </div>
+        </footer>
       </div>
 
-      <div class="cover-footer-meta">
-        <div>© 2026 DeployMedia. All rights reserved.</div>
-        <div>Markets: Saudi Arabia · UAE · United States · United Kingdom</div>
+      <!-- Page 2 Footer Meta -->
+      <div class="page-footer-meta">
+        <div>DeployMedia · Markets: Saudi Arabia · UAE · US · UK</div>
+        <div>Page 2 of 2</div>
       </div>
-    </footer>
+    </div>
 
   </div>
 
