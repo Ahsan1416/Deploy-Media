@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 import Logo from "./Logo";
-import { 
-  Code2, 
-  TrendingUp, 
-  Cpu, 
-  BarChart3, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUpRight, 
+import {
+  Code2,
+  TrendingUp,
+  Cpu,
+  BarChart3,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUpRight,
   Terminal,
   ShieldCheck,
   CheckCircle2
@@ -27,7 +27,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8 pb-12 border-b border-slate-800">
-          
+
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
             <Logo size="md" isDark={true} />
@@ -46,7 +46,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-sky-400" />
                 <a href="mailto:hello@deploymedia.io" className="hover:text-sky-300 transition-colors">
-                  hello@deploymedia.io
+                  ahsanirfan141614@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -187,6 +187,11 @@ export default function Footer() {
                 <Link href="/case-studies" className="hover:text-amber-400 transition-colors">
                   Case Studies ($48M+ Shipped)
                 </Link>
+              </li>
+              <li>
+                <a href="/brochure.html" target="_blank" className="hover:text-amber-400 transition-colors text-slate-300 font-medium flex items-center gap-1">
+                  Company Brochure &amp; PDF <ArrowUpRight className="w-3 h-3 text-sky-400" />
+                </a>
               </li>
               <li>
                 <Link href="/audit" className="hover:text-amber-400 transition-colors text-sky-400 font-semibold">

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeployMedia — Official Company Brochure & Services Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --slate-950: #020617;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --emerald-500: #10b981;
+      --emerald-50: #ecfdf5;
+      --emerald-700: #047857;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--slate-900);
+      background-color: #f1f5f9;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Print action bar at the top (hidden in print) */
+    .top-action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.95);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--slate-800);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+
+    .top-action-bar .brand-name {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-action-bar .btn-print {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .top-action-bar .btn-print:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Brochure Container (A4 / Letter styling) */
+    .brochure-container {
+      max-width: 960px;
+      margin: 32px auto;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* Page / Section Blocks */
+    .brochure-section {
+      padding: 48px 56px;
+      border-bottom: 1px solid var(--slate-200);
+      position: relative;
+    }
+
+    .brochure-section:last-child {
+      border-bottom: none;
+    }
+
+    /* Hero Cover Section */
+    .hero-cover {
+      background: linear-gradient(160deg, #020617 0%, #0f172a 70%, #022c44 100%);
+      color: white;
+      padding: 64px 56px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cover::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(2, 132, 199, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    /* Quick stats grid */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .hero-stat-val {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #38bdf8;
+      line-height: 1.2;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Section Headings */
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .section-heading {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--slate-950);
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-subtext {
+      font-size: 0.98rem;
+      color: var(--slate-600);
+      max-width: 760px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    /* Layman Explanation Box */
+    .layman-box {
+      background: linear-gradient(to right, #f0f9ff, #f8fafc);
+      border-left: 4px solid var(--primary);
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 28px;
+    }
+
+    .layman-box-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .layman-box-text {
+      font-size: 0.9rem;
+      color: var(--slate-700);
+      line-height: 1.55;
+    }
+
+    /* Service Cards Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 24px;
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .service-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .service-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--slate-950);
+      line-height: 1.3;
+    }
+
+    .service-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .service-benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-top: 1px dashed var(--slate-200);
+      padding-top: 14px;
+    }
+
+    .service-benefits li {
+      font-size: 0.82rem;
+      color: var(--slate-700);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .service-benefits li::before {
+      content: '✓';
+      color: var(--emerald-500);
+      font-weight: 800;
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+
+    /* Comparison Table */
+    .comparison-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+    }
+
+    table.comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    table.comparison-table th {
+      padding: 14px 18px;
+      background: var(--slate-50);
+      font-weight: 700;
+      color: var(--slate-800);
+      border-bottom: 2px solid var(--slate-200);
+    }
+
+    table.comparison-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+    }
+
+    table.comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .th-highlight {
+      background: #f0f9ff !important;
+      color: var(--primary-dark) !important;
+      border-bottom: 2px solid var(--primary) !important;
+    }
+
+    .td-highlight {
+      background: rgba(240, 249, 255, 0.4);
+      font-weight: 600;
+      color: var(--slate-950);
+    }
+
+    /* Case Studies Cards */
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .case-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .case-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .case-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--slate-950);
+      margin-bottom: 12px;
+    }
+
+    .case-metrics-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: white;
+      border: 1px solid var(--slate-200);
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .case-metric-box .val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--emerald-700);
+      line-height: 1.1;
+    }
+
+    .case-metric-box .lbl {
+      font-size: 0.72rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .case-desc {
+      font-size: 0.84rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    /* Workflow Steps */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .process-step-card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-950);
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 0.8rem;
+      color: var(--slate-600);
+      line-height: 1.45;
+    }
+
+    /* Footer & CTA Section */
+    .footer-cta {
+      background: var(--slate-950);
+      color: white;
+      padding: 48px 56px;
+      border-radius: 0 0 16px 16px;
+      text-align: center;
+    }
+
+    .footer-cta-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-cta-desc {
+      font-size: 1rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-chips {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .contact-chip {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 10px 18px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .contact-chip:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+
+    .footer-meta {
+      font-size: 0.75rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Print Specific Styles */
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
+
+      .top-action-bar {
+        display: none !important;
+      }
+
+      .brochure-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+
+      .brochure-section {
+        padding: 32px 36px !important;
+        page-break-inside: avoid;
+      }
+
+      .page-break {
+        page-break-before: always;
+      }
+
+      .hero-cover {
+        padding: 48px 36px !important;
+        background: #020617 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .footer-cta {
+        background: #020617 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .service-card, .case-card, .process-step-card {
+        border: 1px solid #cbd5e1 !important;
+        background: #ffffff !important;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .brochure-section {
+        padding: 32px 24px;
+      }
+      .hero-cover {
+        padding: 40px 24px;
+      }
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .services-grid, .case-grid, .process-steps {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar with Print/Save PDF Trigger -->
+  <div class="top-action-bar">
+    <div class="brand-name">
+      <span style="display:inline-block; width:10px; height:10px; background:#38bdf8; border-radius:50%;"></span>
+      DeployMedia · Official Agency Brochure
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="https://deploy-media.vercel.app/" target="_blank" style="color:#94a3b8; font-size:0.85rem; text-decoration:none; font-weight:600;">Visit Website ↗</a>
+      <button class="btn-print" onclick="window.print()">
+        🖨️ Print or Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="brochure-container">
+
+    <!-- PAGE 1: COVER & EXECUTIVE SUMMARY -->
+    <header class="hero-cover">
+      <div class="badge-tag">
+        ⚡ Engineering-Led Growth Agency
+      </div>
+      <h1 class="hero-title">
+        We Engineer <span>High-Speed Code.</span><br />
+        We Deploy <span>High-ROAS Media.</span>
+      </h1>
+      <p class="hero-subtitle">
+        DeployMedia replaces slow bloated agencies with senior full-stack developers and veteran media buyers. We build custom websites that load in under 2 seconds, automate lead operations, and run high-intent paid ad campaigns engineered for closed-won revenue.
+      </p>
+
+      <!-- Quick Metrics Proof -->
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">&lt; 2.0s</div>
+          <div class="hero-stat-label">Average Page Load Time</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">$48M+</div>
+          <div class="hero-stat-label">Client Revenue Shipped</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">3.8× – 4.2×</div>
+          <div class="hero-stat-label">Average Ad ROAS</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-val">1.2s</div>
+          <div class="hero-stat-label">Instant Lead-to-CRM Sync</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 2: THE 3 BIG PROBLEMS WE SOLVE (NON-TECHNICAL TRANSLATION) -->
+    <section class="brochure-section">
+      <div class="section-eyebrow">The Business Challenge</div>
+      <h2 class="section-heading">Why Most Businesses Waste 40%+ of Their Marketing Capital</h2>
+      <p class="section-subtext">
+        Most companies treat web development, paid advertising, and lead operations as separate silos. This creates massive leaks where paying customers slip right through the cracks.
+      </p>
+
+      <div class="layman-box">
+        <div class="layman-box-title">
+          💡 In Plain Words (For Business Owners & Non-Technical Leaders):
+        </div>
+        <div class="layman-box-text">
+          If your website takes 4 seconds to load, <strong>50% of ad visitors leave before reading your offer</strong>. If your sales team takes hours to call a lead back, that customer has already hired your competitor. DeployMedia fixes the speed, the ads, and the automated lead delivery so every marketing dollar brings in maximum return.
+        </div>
+      </div>
+
+      <!-- Comparison Matrix -->
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th style="width: 30%;">Critical Factor</th>
+              <th style="width: 35%;">Traditional Marketing Agencies</th>
+              <th class="th-highlight" style="width: 35%;">The DeployMedia Approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Team Contact</strong></td>
+              <td>Junior account managers forwarding emails back and forth.</td>
+              <td class="td-highlight">Direct access to the senior engineers & media buyers handling your account.</td>
+            </tr>
+            <tr>
+              <td><strong>Website Speed</strong></td>
+              <td>Heavy themes with 40+ plugins that crawl in 4 to 6 seconds.</td>
+              <td class="td-highlight">Custom clean code loading in under 2 seconds globally.</td>
+            </tr>
+            <tr>
+              <td><strong>Ad Campaign Goal</strong></td>
+              <td>Vanity metrics: Impressions, Clicks, Page Likes.</td>
+              <td class="td-highlight">Revenue metrics: Qualified leads, closed demos, and high ROAS.</td>
+            </tr>
+            <tr>
+              <td><strong>Lead Follow-Up</strong></td>
+              <td>Manual spreadsheets emailed at the end of the day or week.</td>
+              <td class="td-highlight">Instant automation: Lead routed to WhatsApp & CRM in 1.2 seconds.</td>
+            </tr>
+            <tr>
+              <td><strong>Account Ownership</strong></td>
+              <td>Held hostage inside proprietary agency accounts.</td>
+              <td class="td-highlight">100% Client Ownership from day 1 for all code, ads, and data.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CORE SERVICE PILLARS -->
+    <section class="brochure-section page-break">
+      <div class="section-eyebrow">Service Catalog Pillar 01</div>
+      <h2 class="section-heading">Web & Platform Engineering (BUILD)</h2>
+      <p class="section-subtext">
+        High-performance websites and online stores engineered to load instantly and turn cold traffic into paying clients.
+      </p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🌐</div>
+            <div>
+              <div class="service-title">WordPress & Elementor Pro</div>
+              <div class="service-subtitle">Fast, Beautiful & Easy to Edit</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            We build custom Elementor Pro websites that load in 2.0s. Your marketing team gets visual drag-and-drop freedom to edit pages anytime without breaking the design or code.
+          </p>
+          <ul class="service-benefits">
+            <li>Tailored Global Style Kits matching your brand identity.</li>
+            <li>Sub-2.0s speed optimization with zero plugin clutter.</li>
+            <li>Direct integration with your CRM, Google Analytics & Meta ads.</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">⚡</div>
+            <div>
+              <div class="service-title">Next.js & React Web Apps</div>
+              <div class="service-subtitle">Sub-Second Performance & Custom Portals</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            For high-growth SaaS, tech startups, and enterprise platforms needing lightning-fast custom dashboards, client portals, and interactive web tools.
+          </p>
+          <ul class="service-benefits">
+            <li>0.6s server response with 100/100 Core Web Vitals score.</li>
+            <li>Secure API backends and modern interactive components.</li>
+            <li>Built for high-traffic scalability with zero downtime.</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🛍️</div>
+            <div>
+              <div class="service-title">Shopify & E-Commerce Stores</div>
+              <div class="service-subtitle">High-Conversion Checkout & Local Payment Setup</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Custom online stores tuned for smooth checkout flows and repeat purchases. Specialized setups for US, UK, Saudi Arabia (KSA) and UAE markets.
+          </p>
+          <ul class="service-benefits">
+            <li>GCC-ready: Mada, Apple Pay, Tabby, Tamara & local shipping.</li>
+            <li>High-converting 1-page checkout funnels and upsells.</li>
+            <li>Server-side inventory and ad tracking pre-installed.</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🎯</div>
+            <div>
+              <div class="service-title">High-Converting Landing Pages</div>
+              <div class="service-subtitle">Direct-Response Funnels That Convert Cold Traffic</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Standalone conversion-focused pages built specifically to match your ad campaigns, eliminating distractions and driving high phone calls or form inquiries.
+          </p>
+          <ul class="service-benefits">
+            <li>Clear value propositions that speak to customer pain points.</li>
+            <li>Zero layout shift (CLS 0.00) with frictionless mobile forms.</li>
+            <li>A/B split testing ready to maximize return on ad spend.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PAID MEDIA & PERFORMANCE ADS -->
+    <section class="brochure-section">
+      <div class="section-eyebrow">Service Catalog Pillar 02</div>
+      <h2 class="section-heading">High-ROAS Performance Advertising (DEPLOY MEDIA)</h2>
+      <p class="section-subtext">
+        Paid advertising campaigns designed strictly for revenue generation, customer acquisition, and qualified pipeline.
+      </p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🔍</div>
+            <div>
+              <div class="service-title">Google Ads & Performance Max</div>
+              <div class="service-subtitle">Search, Shopping & High-Intent Capture</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Capture customers right when they are searching for your solutions on Google. We isolate negative keywords so you never waste budget on useless clicks.
+          </p>
+          <ul class="service-benefits">
+            <li>High-intent search keyword architecture.</li>
+            <li>Performance Max (PMax) asset groups tailored for your region.</li>
+            <li>Direct tracking of inbound calls and revenue conversions.</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">📱</div>
+            <div>
+              <div class="service-title">Meta Ads (Facebook & Instagram)</div>
+              <div class="service-subtitle">Weekly Creative Ad Engine</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Engage your ideal prospects with thumb-stopping video and image ads. We run a continuous weekly creative testing cadence so your ads never suffer from fatigue.
+          </p>
+          <ul class="service-benefits">
+            <li>Rapid testing of multiple hooks, angles, and formats.</li>
+            <li>Bypass iOS 14+ tracking loss with Server-Side Meta CAPI.</li>
+            <li>Scale daily budgets profitably while protecting your profit margin.</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">💼</div>
+            <div>
+              <div class="service-title">LinkedIn B2B Ads & ABM</div>
+              <div class="service-subtitle">Target C-Level Decision Makers</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Target specific industries, job titles, and company sizes. Put your offering directly in front of CEOs, directors, and purchasing managers.
+          </p>
+          <ul class="service-benefits">
+            <li>Account-Based Marketing (ABM) for high-ticket contracts.</li>
+            <li>Qualified demo requests instead of low-quality contact forms.</li>
+            <li>Direct sync into HubSpot, Salesforce, or your CRM.</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🚀</div>
+            <div>
+              <div class="service-title">Microsoft Bing & AI Channels</div>
+              <div class="service-subtitle">Bing Ads & Emerging ChatGPT Ads</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Tap into high-income corporate buyers using default enterprise browsers (Bing) and capture early adopters in AI conversational search.
+          </p>
+          <ul class="service-benefits">
+            <li>Cheaper Cost-Per-Click (CPC) compared to standard channels.</li>
+            <li>High purchasing power desktop demographics.</li>
+            <li>Early mover advantage in conversational AI placements.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: AUTOMATIONS & DATA ATTRIBUTION -->
+    <section class="brochure-section page-break">
+      <div class="section-eyebrow">Service Catalog Pillar 03</div>
+      <h2 class="section-heading">Smart Automations & Data Tracking (GROWTH & OPS)</h2>
+      <p class="section-subtext">
+        Save dozens of manual hours every week and ensure 100% of your sales are accurately tracked.
+      </p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">🤖</div>
+            <div>
+              <div class="service-title">n8n Workflow & AI Automation</div>
+              <div class="service-subtitle">Connect Website Forms Directly to Your Team</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            When a customer fills out a form, our automated system qualifies them, alerts your sales reps on WhatsApp or Slack in 1.2 seconds, and books a calendar slot.
+          </p>
+          <ul class="service-benefits">
+            <li>Eliminate manual copy-pasting into spreadsheets.</li>
+            <li>Saves 15–25 hours of administrative work every single week.</li>
+            <li>Automated real-time email & WhatsApp reminders to prevent no-shows.</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-icon">📊</div>
+            <div>
+              <div class="service-title">Server-Side Tracking & Analytics</div>
+              <div class="service-subtitle">Meta CAPI, Google Tag Manager & GA4</div>
+            </div>
+          </div>
+          <p class="service-desc">
+            Apple's privacy updates block up to 40% of browser tracking. Our server-side tracking captures all purchase events, giving ad algorithms the data they need to lower your ad costs.
+          </p>
+          <ul class="service-benefits">
+            <li>Accurate tracking of every phone call, form, and sale.</li>
+            <li>Prevents wasted ad spend by feeding accurate conversion signals.</li>
+            <li>Custom Google Analytics 4 (GA4) executive dashboards.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Proven Case Studies -->
+      <div style="margin-top: 36px;">
+        <div class="section-eyebrow">Proven Track Record</div>
+        <h3 style="font-size: 1.4rem; font-weight:800; margin-bottom: 16px;">Real Numbers from Real Campaigns</h3>
+
+        <div class="case-grid">
+          <div class="case-card">
+            <div class="case-tag">B2B SaaS Platform · North America & Europe</div>
+            <div class="case-title">CloudScale SaaS Acquisition</div>
+            <div class="case-metrics-row">
+              <div class="case-metric-box">
+                <div class="val">$1,200</div>
+                <div class="lbl">Down from $2,600 CPA</div>
+              </div>
+              <div style="height:24px; width:1px; background:#cbd5e1;"></div>
+              <div class="case-metric-box">
+                <div class="val">3.8×</div>
+                <div class="lbl">Pipeline Value Lift</div>
+              </div>
+            </div>
+            <p class="case-desc">
+              Rebuilt their slow marketing site into Next.js (1.2s load) and focused Google Ads on high-intent decision-makers, dropping cost-per-customer by over 50%.
+            </p>
+          </div>
+
+          <div class="case-card">
+            <div class="case-tag">Logistics & Freight · Saudi Arabia & UAE</div>
+            <div class="case-title">Logix MENA Cross-Border Scale</div>
+            <div class="case-metrics-row">
+              <div class="case-metric-box">
+                <div class="val">4.2×</div>
+                <div class="lbl">Blended ROAS (from 1.4x)</div>
+              </div>
+              <div style="height:24px; width:1px; background:#cbd5e1;"></div>
+              <div class="case-metric-box">
+                <div class="val">+$2.1M</div>
+                <div class="lbl">Gross Bookings Scaled</div>
+              </div>
+            </div>
+            <p class="case-desc">
+              Deployed a bilingual custom WordPress platform loading in 2.0s across GCC with server-side CAPI tracking, turning an unprofitable campaign into 4.2x ROAS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HOW WE WORK (4 SIMPLE STEPS) -->
+    <section class="brochure-section">
+      <div class="section-eyebrow">Simple & Transparent</div>
+      <h2 class="section-heading">How Working With Us Looks Like</h2>
+      <p class="section-subtext">
+        No 6-month onboarding delays. We work with engineering speed to get your site and campaigns live in weeks.
+      </p>
+
+      <div class="process-steps">
+        <div class="process-step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">Free 30-Min Audit</div>
+          <div class="step-desc">
+            A senior operator reviews your current website speed, ad tracking, and bottlenecks with zero sales pressure.
+          </div>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">Clear Blueprint (24h)</div>
+          <div class="step-desc">
+            You receive an easy-to-read proposal with exact deliverables, transparent pricing, and defined milestones.
+          </div>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">Rapid Build & Launch</div>
+          <div class="step-desc">
+            We develop clean code, install server-side tracking, configure ad creatives, and launch smoothly in weeks.
+          </div>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-number">4</div>
+          <div class="step-title">Scale & Automate</div>
+          <div class="step-desc">
+            Weekly creative testing, ongoing speed monitoring, and automated lead routing to grow your revenue.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACK COVER / CTA -->
+    <footer class="footer-cta">
+      <div class="badge-tag" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color:#fff; margin-bottom:14px;">
+        Zero Sales Pressure · 100% Engineering Review
+      </div>
+      <h2 class="footer-cta-title">
+        Ready to Transform Your Website &amp; Paid Campaigns?
+      </h2>
+      <p class="footer-cta-desc">
+        Claim a complimentary 30-minute technical and growth tear-down. We will review your site speed, tracking setup, and ad architecture directly.
+      </p>
+
+      <div class="contact-chips">
+        <a class="contact-chip" href="https://deploy-media.vercel.app/" target="_blank">
+          🌐 deploy-media.vercel.app
+        </a>
+        <a class="contact-chip" href="https://deploy-media.vercel.app/audit" target="_blank">
+          📋 Request Free Audit
+        </a>
+        <a class="contact-chip" href="mailto:ahsanirfan141614@gmail.com">
+          ✉️ ahsanirfan141614@gmail.com
+        </a>
+        <a class="contact-chip" href="https://deploy-media.vercel.app/contact" target="_blank">
+          📅 Book 30-min Strategy Session
+        </a>
+      </div>
+
+      <div class="footer-meta">
+        <div>© 2026 DeployMedia Inc. All rights reserved.</div>
+        <div>Global Hubs: San Francisco · Dubai · Riyadh · London · Remote Worldwide</div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
