@@ -17,8 +17,10 @@
       --slate-800: #1e293b;
       --slate-700: #334155;
       --slate-600: #475569;
+      --slate-500: #64748b;
       --slate-200: #e2e8f0;
       --slate-100: #f8fafc;
+      --emerald-700: #047857;
       --emerald-600: #059669;
       --emerald-50: #ecfdf5;
     }
@@ -33,7 +35,7 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--slate-900);
       background-color: #f1f5f9;
-      line-height: 1.5;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -79,12 +81,18 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      transition: all 0.2s;
     }
 
-    /* Brochure Container (Web View) */
+    .btn-print:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+    }
+
+    /* Brochure Outer Container (Web View) */
     .brochure-container {
       max-width: 900px;
-      margin: 24px auto;
+      margin: 24px auto 48px;
       background: white;
       box-shadow: 0 10px 40px rgba(0,0,0,0.08);
       border-radius: 16px;
@@ -92,9 +100,9 @@
       border: 1px solid var(--slate-200);
     }
 
-    /* Page Definition for Print & Display */
+    /* Page Definition */
     .brochure-page {
-      padding: 32px 40px;
+      padding: 30px 38px;
       background: white;
       display: flex;
       flex-direction: column;
@@ -108,13 +116,13 @@
       border-bottom: 1px dashed #cbd5e1;
     }
 
-    /* Header Cover */
+    /* Header Box */
     .header-box {
       background: linear-gradient(145deg, #020617 0%, #0f172a 70%, #032b44 100%);
       color: white;
-      padding: 28px 32px;
+      padding: 26px 30px;
       border-radius: 14px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .brand-eyebrow {
@@ -142,44 +150,44 @@
 
     .header-desc {
       font-size: 0.92rem;
-      color: #94a3b8;
-      line-height: 1.5;
+      color: #cbd5e1;
+      line-height: 1.55;
     }
 
-    /* Saudi Arabia Banner */
+    /* Saudi Arabia & GCC Banner */
     .gcc-banner {
-      background: #ecfdf5;
-      border: 1.5px solid #a7f3d0;
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
       border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 18px;
+      padding: 13px 18px;
+      margin-bottom: 14px;
       display: flex;
-      gap: 14px;
+      gap: 12px;
       align-items: flex-start;
     }
 
     .gcc-banner-icon {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       line-height: 1;
       flex-shrink: 0;
     }
 
     .gcc-banner-title {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 800;
       color: #065f46;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .gcc-banner-text {
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       color: #047857;
       line-height: 1.45;
     }
 
-    /* Section Headings */
+    /* Section Headers */
     .section-header {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .section-eyebrow {
@@ -191,16 +199,16 @@
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 800;
       color: var(--slate-950);
       letter-spacing: -0.3px;
     }
 
     .section-desc {
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       color: var(--slate-600);
-      margin-top: 2px;
+      margin-top: 1px;
     }
 
     /* Service Cards */
@@ -208,8 +216,8 @@
       background: #ffffff;
       border: 1.5px solid var(--slate-200);
       border-radius: 12px;
-      padding: 16px 18px;
-      margin-bottom: 12px;
+      padding: 15px 18px;
+      margin-bottom: 11px;
     }
 
     .service-card:last-child {
@@ -220,16 +228,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .service-card-title {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--slate-950);
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
     .service-badge {
@@ -242,67 +250,72 @@
     }
 
     .service-card-desc {
-      font-size: 0.82rem;
+      font-size: 0.81rem;
       color: var(--slate-700);
       line-height: 1.45;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
+    /* Feature Bullets (Clean 2-Column Grid) */
     .feature-bullets {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 6px 16px;
+      gap: 5px 16px;
     }
 
     .feature-bullets li {
-      font-size: 0.76rem;
+      font-size: 0.77rem;
       color: var(--slate-600);
       display: flex;
       align-items: flex-start;
       gap: 6px;
+      line-height: 1.35;
+    }
+
+    .feature-bullets li strong {
+      color: var(--slate-900);
     }
 
     .feature-bullets li::before {
       content: '✔';
       color: var(--emerald-600);
       font-weight: 800;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
     }
 
-    /* Next.js Special Feature Box */
+    /* Next.js Clean Spotlight Box */
     .nextjs-spotlight {
-      background: #0f172a;
-      color: white;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
       border-radius: 10px;
-      padding: 12px 16px;
+      padding: 10px 14px;
       margin-top: 8px;
-      border: 1px solid var(--slate-700);
     }
 
     .nextjs-spotlight-title {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 800;
-      color: #38bdf8;
+      color: var(--primary-dark);
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
+      gap: 5px;
+      margin-bottom: 3px;
     }
 
     .nextjs-spotlight-text {
-      font-size: 0.78rem;
-      color: #cbd5e1;
-      line-height: 1.45;
+      font-size: 0.77rem;
+      color: var(--slate-700);
+      line-height: 1.4;
     }
 
     .nextjs-grid {
-      margin-top: 8px;
+      margin-top: 6px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 4px 12px;
-      font-size: 0.74rem;
-      color: #94a3b8;
+      font-size: 0.75rem;
+      color: var(--slate-700);
     }
 
     .nextjs-grid div {
@@ -313,109 +326,109 @@
 
     .nextjs-grid div::before {
       content: '✦';
-      color: #38bdf8;
+      color: var(--primary);
     }
 
-    /* 2x2 Grid for Ads & Marketing */
+    /* 2x2 Grid for Marketing Cards */
     .grid-2x2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
     .ad-card {
       background: #ffffff;
       border: 1.5px solid var(--slate-200);
       border-radius: 12px;
-      padding: 14px 16px;
+      padding: 13px 15px;
     }
 
     .ad-card-title {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 800;
       color: var(--slate-950);
       display: flex;
       align-items: center;
       gap: 6px;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .ad-card-desc {
-      font-size: 0.78rem;
+      font-size: 0.77rem;
       color: var(--slate-600);
       line-height: 1.4;
     }
 
-    /* Workflow 4 Steps */
+    /* Process 4 Steps */
     .process-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 16px;
+      gap: 9px;
+      margin-bottom: 14px;
     }
 
     .process-box {
       background: var(--slate-100);
       border: 1px solid var(--slate-200);
       border-radius: 10px;
-      padding: 12px;
+      padding: 11px 12px;
     }
 
     .process-num {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background: var(--primary);
       color: white;
       font-weight: 800;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .process-title {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--slate-950);
       margin-bottom: 2px;
     }
 
     .process-desc {
-      font-size: 0.72rem;
+      font-size: 0.71rem;
       color: var(--slate-600);
       line-height: 1.35;
     }
 
-    /* Footer Banner */
+    /* Footer Box */
     .footer-box {
       background: var(--slate-950);
       color: white;
-      padding: 20px 28px;
+      padding: 18px 24px;
       border-radius: 12px;
       text-align: center;
     }
 
     .footer-title {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 800;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       letter-spacing: -0.3px;
     }
 
     .footer-desc {
-      font-size: 0.8rem;
+      font-size: 0.79rem;
       color: #94a3b8;
-      max-width: 540px;
-      margin: 0 auto 12px;
+      max-width: 520px;
+      margin: 0 auto 10px;
     }
 
     .footer-contacts {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 9px;
       flex-wrap: wrap;
     }
 
@@ -424,7 +437,7 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       padding: 6px 14px;
       border-radius: 9999px;
-      font-size: 0.78rem;
+      font-size: 0.77rem;
       font-weight: 600;
       color: #f1f5f9;
       text-decoration: none;
@@ -434,13 +447,13 @@
     }
 
     .page-footer-meta {
-      font-size: 0.68rem;
-      color: var(--slate-400);
+      font-size: 0.67rem;
+      color: var(--slate-500);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 10px;
-      margin-top: 10px;
+      padding-top: 8px;
+      margin-top: 8px;
       border-top: 1px solid var(--slate-200);
     }
 
@@ -489,14 +502,14 @@
         print-color-adjust: exact;
       }
 
-      .nextjs-spotlight {
-        background: #0f172a !important;
+      .gcc-banner {
+        background: #f0fdf4 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
 
-      .gcc-banner {
-        background: #ecfdf5 !important;
+      .nextjs-spotlight {
+        background: #f8fafc !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -535,7 +548,7 @@
     <!-- ================= PAGE 1 ================= -->
     <div class="brochure-page page-break-after">
       <div>
-        <!-- Header -->
+        <!-- Header Box -->
         <header class="header-box">
           <div class="brand-eyebrow">DeployMedia · Digital Agency &amp; Systems</div>
           <h1 class="header-title">
@@ -588,7 +601,7 @@
               Ordinary websites reload on every click. <strong>Next.js makes your site feel like a mobile app:</strong> page transitions are instant, screens never flicker, and the site never gets stuck or heavy over time.
             </div>
             <div class="nextjs-grid">
-              <div><strong>Instant Page Opening:</strong> Zero loading delay for visitors.</div>
+              <div><strong>App-Like Speed:</strong> Zero loading delay for visitors.</div>
               <div><strong>Google SEO Favorite:</strong> Clean code ranks higher in search results.</div>
               <div><strong>Bank-Grade Security:</strong> No fragile plugins that can crash.</div>
               <div><strong>Future-Proof:</strong> Modern standards that stay fast for years.</div>
@@ -608,10 +621,10 @@
             Custom, branded WordPress websites built with solid architecture and professional styling. Your team gets easy access to handle minor text and daily content adjustments, while we handle technical maintenance, feature expansions, and security.
           </p>
           <ul class="feature-bullets">
-            <li>Bespoke visual design tailored to your brand identity</li>
-            <li>Mobile-first layout that looks perfect on every phone</li>
-            <li>Simple access for minor routine text and photo adjustments</li>
-            <li>Ongoing technical maintenance and custom feature expansion</li>
+            <li><strong>Bespoke Visual Design:</strong> Tailored specifically to your brand identity</li>
+            <li><strong>Mobile-First Layout:</strong> Looks and performs perfectly on every phone screen</li>
+            <li><strong>Routine Content Access:</strong> Simple dashboard for minor text and image adjustments</li>
+            <li><strong>Managed Evolution:</strong> Ongoing technical maintenance and custom feature expansion</li>
           </ul>
         </div>
 
@@ -627,10 +640,10 @@
             Complete online shopping stores optimized for a frictionless customer buying experience. Customers can browse products easily, pay with local cards, and receive automatic order tracking.
           </p>
           <ul class="feature-bullets">
-            <li>Saudi Arabia payments: Mada, Tabby, Tamara &amp; Apple Pay</li>
-            <li>Simple, clean checkout page with zero confusing steps</li>
-            <li>Automatic inventory management and digital invoice generation</li>
-            <li>Instant order notifications sent to your team or warehouse</li>
+            <li><strong>Saudi Arabia Payments:</strong> Mada, Tabby, Tamara &amp; Apple Pay integration</li>
+            <li><strong>Frictionless Checkout:</strong> Simple buying flow designed to maximize completed orders</li>
+            <li><strong>Automated Management:</strong> Real-time stock tracking and digital invoice generation</li>
+            <li><strong>Instant Order Alerts:</strong> Automatic notifications routed to your team or warehouse</li>
           </ul>
         </div>
       </div>
@@ -702,10 +715,10 @@
             The moment a customer submits a form on your website, our system sends a WhatsApp or phone notification directly to your salesperson, while sending an immediate confirmation to the customer. No delays, no spreadsheets.
           </p>
           <ul class="feature-bullets">
-            <li>Instant WhatsApp/Slack alert to your sales reps</li>
-            <li>Automatic lead capture into Google Sheets, Excel, or CRM</li>
-            <li>Automated reminder messages to prevent missed calls</li>
-            <li>Saves your staff hours of manual data entry every week</li>
+            <li><strong>Instant WhatsApp Alerts:</strong> Real-time notifications sent directly to your sales reps</li>
+            <li><strong>Automatic Capture:</strong> Leads saved automatically to Google Sheets, Excel, or CRM</li>
+            <li><strong>Automated Reminders:</strong> Confirmation messages to reduce missed calls and meetings</li>
+            <li><strong>Time-Saving:</strong> Eliminates hours of manual data entry and copying every week</li>
           </ul>
         </div>
 
@@ -718,15 +731,15 @@
             Complete conversion tracking setup showing exactly which ad generated which phone call, WhatsApp chat, or online order. Unprofitable ads are stopped, protecting your budget.
           </p>
           <ul class="feature-bullets">
-            <li>Track every phone call, WhatsApp click, and form accurately</li>
-            <li>Clear weekly reports showing results in straightforward language</li>
-            <li>No wasted ad budget on underperforming campaigns</li>
-            <li>Full setup of Google Analytics and Meta conversion tracking</li>
+            <li><strong>Full Attribution:</strong> Track every phone call, WhatsApp click, and form accurately</li>
+            <li><strong>Plain-Language Reports:</strong> Clear weekly summaries showing results you can understand</li>
+            <li><strong>Budget Protection:</strong> Shut down non-performing ads and scale profitable campaigns</li>
+            <li><strong>Complete Setup:</strong> Professional configuration of Google Analytics and Meta tracking</li>
           </ul>
         </div>
 
         <!-- Work Process -->
-        <div class="section-header" style="margin-top: 14px;">
+        <div class="section-header" style="margin-top: 12px;">
           <div class="section-eyebrow">Work Process</div>
           <h2 class="section-title" style="font-size: 1.15rem;">How We Work With You</h2>
         </div>
