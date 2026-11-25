@@ -11,7 +11,12 @@ import {
   Globe2, 
   CheckCircle2, 
   Users, 
-  Cpu 
+  Cpu,
+  ExternalLink,
+  GraduationCap,
+  Search,
+  Monitor,
+  Check
 } from "lucide-react";
 
 export const metadata = {
@@ -132,12 +137,251 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-2 text-xs font-mono text-slate-400 text-center">
-                  Deployed across US, Europe, UAE &amp; Saudi Arabia markets.
+                  Deployed across Australia (RTOs &amp; Higher Ed), Saudi Arabia (KSA), UAE &amp; GCC, US &amp; UK.
                 </div>
               </div>
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* Australian RTOs & Higher Education Showcase */}
+      <section className="py-20 bg-slate-900 text-white relative border-y border-slate-800 overflow-hidden">
+        <div className="absolute inset-0 bg-tech-grid-dark opacity-20 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div className="max-w-3xl mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-950 border border-sky-800 text-sky-400 text-xs font-mono font-bold tracking-wider uppercase mb-3">
+              <span>🇦🇺</span>
+              <span>Australia · Education &amp; RTO Experience</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+              Powering Leading Australian Registered Training Organisations (RTOs)
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+              DeployMedia manages the full digital operations for respected Australian vocational colleges and training providers. From technical website development and continuous maintenance to high-converting student marketing and dominant Google course SEO.
+            </p>
+          </div>
+
+          {/* 4 Australian RTO Client Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            
+            {/* 1. BCTA */}
+            <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all shadow-xl group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-sm">
+                    BCTA
+                  </div>
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">
+                    Victoria, AU
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-sky-300 transition-colors">
+                  Building Construction Training Australia
+                </h3>
+                <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                  Leading Australian RTO delivering nationally recognized building, construction, and trades qualifications.
+                </p>
+                <div className="mt-4 pt-3 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-300">
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Website Development &amp; Maintenance</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Student Recruitment Marketing</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Trades Course SEO (Victoria)</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-900">
+                <a
+                  href="https://www.bcta.vic.edu.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  <span>bcta.vic.edu.au</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* 2. Practical Pathways */}
+            <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all shadow-xl group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm">
+                    PP
+                  </div>
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">
+                    Australia Wide
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  Practical Pathways (PracPathways)
+                </h3>
+                <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                  Specialized healthcare, aged care, and nursing pathway education provider connecting students with accredited qualifications.
+                </p>
+                <div className="mt-4 pt-3 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-300">
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>High-Converting Web Architecture</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Healthcare Intake Google Ads</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Course Search Optimization</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-900">
+                <a
+                  href="https://www.pracpathways.com.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  <span>pracpathways.com.au</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* 3. McCarthy Learning */}
+            <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all shadow-xl group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm">
+                    ML
+                  </div>
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">
+                    Corporate &amp; RTO
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+                  McCarthy Learning
+                </h3>
+                <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                  Australian corporate training, leadership development, and accredited vocational education institute.
+                </p>
+                <div className="mt-4 pt-3 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-300">
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Clean Course Portal Engineering</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Corporate Lead Routing &amp; Funnels</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>National Leadership SEO</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-900">
+                <a
+                  href="https://mccarthylearning.com.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  <span>mccarthylearning.com.au</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* 4. Angel Institute */}
+            <div className="rounded-2xl bg-slate-950 border border-slate-800 p-6 flex flex-col justify-between hover:border-sky-500/50 transition-all shadow-xl group">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm">
+                    AIT
+                  </div>
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">
+                    Sydney / NSW
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">
+                  Angel Institute of Technology
+                </h3>
+                <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                  Australian accredited training institute delivering high-quality business, management, and technical qualifications.
+                </p>
+                <div className="mt-4 pt-3 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-300">
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>End-to-End Website Management</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Student Enrollment Campaigns</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>National Accreditation SEO</span>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-900">
+                <a
+                  href="https://www.angelinstitute.edu.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  <span>angelinstitute.edu.au</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* 3 Pillars of What We Deliver for Australian RTOs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-800">
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                <Monitor className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Website Development &amp; Management</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Ongoing technical maintenance, fast course catalogs, mobile-first student application forms, and complete regulatory alignment with Australian vocational guidelines.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">Student Enrolment Marketing</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                High-intent Google Search and Meta ad campaigns engineered to capture qualified student applications ahead of intake cutoffs while minimizing cost-per-enrolment.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-slate-800/80">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                <Search className="w-5 h-5" />
+              </div>
+              <h4 className="text-lg font-bold text-white mb-2">National &amp; Local Course SEO</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Dominating page 1 Google rankings across Melbourne, Sydney, and Australia for accredited certificates, diplomas, and high-demand vocational career terms.
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
 

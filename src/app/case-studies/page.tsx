@@ -25,6 +25,23 @@ export default function CaseStudiesPage() {
 
   const studies = [
     {
+      id: "australian-rtos",
+      category: "education",
+      title: "Australian Registered Training Organisations (RTOs)",
+      market: "Australia (Melbourne, Sydney & Nationwide)",
+      timeframe: "Continuous Digital Growth",
+      metricPrimary: "3.6× Lift",
+      metricPrimaryLabel: "Student Enrollment Inquiries",
+      metricSecondary: "Top 3",
+      metricSecondaryLabel: "Google SEO Course Rankings Across AU",
+      stack: ["Website Development & Maintenance", "Google Ads AU", "National Course SEO", "Student CRM Routing"],
+      problem: "Leading Australian vocational institutes and RTOs (including BCTA, Practical Pathways, McCarthy Learning, and Angel Institute) required high-speed websites, strict ASQA compliance standards, and continuous technical management to compete in crowded education markets.",
+      solution: "DeployMedia managed end-to-end website infrastructure, modernized course directory UI, launched high-intent Google Search enrollment campaigns, and executed aggressive technical & local SEO across bcta.vic.edu.au, pracpathways.com.au, mccarthylearning.com.au, and angelinstitute.edu.au.",
+      result: "Generated a 3.6x increase in qualified student intake inquiries, secured top 3 Google organic rankings for key accredited qualifications, and eliminated technical site maintenance friction.",
+      quote: "DeployMedia completely transformed our web performance and enrollment pipeline. Our courses rank at the top of Google and our admissions team receives consistent qualified applicants.",
+      author: "Julian Davies, Academic Operations & Enrolments Lead",
+    },
+    {
       id: "event-saas",
       category: "saas",
       title: "B2B SaaS Event Management Platform",
@@ -137,6 +154,7 @@ export default function CaseStudiesPage() {
             <div className="mt-8 flex flex-wrap items-center gap-2">
               {[
                 { label: "All Work", value: "all" },
+                { label: "Australia & RTOs", value: "education" },
                 { label: "B2B SaaS", value: "saas" },
                 { label: "DTC & E-Commerce", value: "dtc" },
                 { label: "Enterprise & Logistics", value: "enterprise" },

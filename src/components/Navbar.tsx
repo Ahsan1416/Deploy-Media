@@ -80,6 +80,7 @@ export default function Navbar() {
   ];
 
   const marketsIndustries = [
+    { title: "Australia (RTOs & Ed)", subtitle: "BCTA, PracPathways & Institutes", slug: "australia", icon: MapPin },
     { title: "Saudi Arabia", subtitle: "Riyadh, Jeddah, Dammam", slug: "saudi-arabia", icon: MapPin },
     { title: "UAE", subtitle: "Dubai, Abu Dhabi, Sharjah", slug: "uae", icon: MapPin },
     { title: "GCC", subtitle: "All six markets", slug: "gcc", icon: Globe },

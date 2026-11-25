@@ -19,6 +19,17 @@ export default function CaseStudiesSection() {
 
   const caseStudies = [
     {
+      category: "enterprise",
+      title: "Australian RTOs (BCTA, PracPathways, McCarthy & Angel Institute)",
+      market: "Australia Nationwide",
+      stack: ["Website Management", "Google Ads AU", "Education SEO", "Student Funnels"],
+      metricPrimary: "3.6× Inquiries",
+      metricLabel: "Student Enrolment Growth",
+      metricSecondary: "Top 3 Google SEO",
+      desc: "Engineered web infrastructure, continuous technical maintenance, paid student acquisition, and national course SEO for leading Australian Registered Training Organisations.",
+      slug: "australia",
+    },
+    {
       category: "saas",
       title: "B2B SaaS Event Platform",
       market: "North America & Europe",

@@ -51,7 +51,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-sky-400" />
-                <span>San Francisco · Dubai · Riyadh · London · Remote Worldwide</span>
+                <span>Australia (Melbourne / Sydney) · Riyadh · Dubai · London · San Francisco</span>
               </div>
             </div>
           </div>
@@ -214,8 +214,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/australia" className="hover:text-amber-400 transition-colors text-slate-300">
+                  Australia RTOs &amp; Education
+                </Link>
+              </li>
+              <li>
                 <span className="text-[11px] text-slate-500">
-                  GCC Hub: UAE, Saudi Arabia & Qatar
+                  GCC Hub: UAE, Saudi Arabia &amp; Qatar
                 </span>
               </li>
             </ul>

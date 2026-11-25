@@ -57,6 +57,7 @@ export default function ServicesMegaGrid({ isCompact = false }: { isCompact?: bo
   ];
 
   const marketsIndustries = [
+    { title: "Australia (RTOs & Ed)", subtitle: "BCTA, PracPathways & Institutes", slug: "australia", icon: MapPin },
     { title: "Saudi Arabia", subtitle: "Riyadh, Jeddah, Dammam", slug: "saudi-arabia", icon: MapPin },
     { title: "UAE", subtitle: "Dubai, Abu Dhabi, Sharjah", slug: "uae", icon: MapPin },
     { title: "GCC", subtitle: "All six markets", slug: "gcc", icon: Globe },
@@ -121,7 +122,7 @@ export default function ServicesMegaGrid({ isCompact = false }: { isCompact?: bo
               Explore Every Service, Channel &amp; Market
             </h2>
             <p className="mt-2 text-sm sm:text-base text-slate-400 max-w-2xl">
-              From sub-second Next.js and Headless WordPress codebases to senior performance media buying across the US, UK, Saudi Arabia and the GCC.
+              From sub-second Next.js and Headless WordPress codebases to senior performance media buying across Australia, Saudi Arabia, the UAE, the US, and the UK.
             </p>
           </div>
 

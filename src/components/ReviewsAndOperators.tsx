@@ -13,6 +13,13 @@ import Link from "next/link";
 export default function ReviewsAndOperators() {
   const testimonials = [
     {
+      quote: "DeployMedia managed our website development, technical maintenance, and student recruitment marketing with complete precision. Our student course inquiries grew by 3.6x and our organic Google rankings for key accredited qualifications reached the top 3 across Australia.",
+      author: "Julian Davies",
+      role: "Operations & Enrolments Director",
+      company: "Vocational Education & RTO Network (Melbourne, AU)",
+      metric: "3.6× Inquiries Lift",
+    },
+    {
       quote: "DeployMedia rebuilt our legacy marketing site into Next.js 15 (1.2s Core Web Vitals) and restructured our Google Ads. Our cost per closed customer dropped from $2,600 down to $1,200 in 60 days.",
       author: "Alexandre Chen",
       role: "VP of Growth & Engineering",

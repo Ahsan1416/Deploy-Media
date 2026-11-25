@@ -155,35 +155,63 @@
       line-height: 1.55;
     }
 
-    /* Saudi Arabia & GCC Banner */
-    .gcc-banner {
-      background: #f0fdf4;
-      border: 1.5px solid #bbf7d0;
-      border-radius: 12px;
-      padding: 12px 18px;
+    /* Regional Specializations (Australia & Saudi Arabia / GCC) */
+    .regional-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
       margin-bottom: 12px;
+    }
+
+    .regional-banner {
+      border-radius: 12px;
+      padding: 10px 14px;
       display: flex;
-      gap: 14px;
+      gap: 10px;
       align-items: flex-start;
     }
 
-    .gcc-banner-icon {
-      font-size: 1.6rem;
+    .aus-banner {
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+    }
+
+    .aus-banner .regional-banner-title {
+      color: #1e40af;
+    }
+
+    .aus-banner .regional-banner-text {
+      color: #1d4ed8;
+    }
+
+    .gcc-banner {
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+    }
+
+    .gcc-banner .regional-banner-title {
+      color: #065f46;
+    }
+
+    .gcc-banner .regional-banner-text {
+      color: #047857;
+    }
+
+    .regional-banner-icon {
+      font-size: 1.4rem;
       line-height: 1;
       flex-shrink: 0;
     }
 
-    .gcc-banner-title {
-      font-size: 1.05rem;
+    .regional-banner-title {
+      font-size: 0.95rem;
       font-weight: 800;
-      color: #065f46;
       margin-bottom: 2px;
     }
 
-    .gcc-banner-text {
-      font-size: 0.94rem;
-      color: #047857;
-      line-height: 1.45;
+    .regional-banner-text {
+      font-size: 0.82rem;
+      line-height: 1.4;
     }
 
     /* Section Headers */
@@ -505,12 +533,32 @@
         print-color-adjust: exact;
       }
 
-      .gcc-banner {
-        background: #f0fdf4 !important;
-        padding: 9px 14px !important;
-        margin-bottom: 8px !important;
+      .regional-grid {
+        gap: 6px !important;
+        margin-bottom: 7px !important;
+      }
+
+      .regional-banner {
+        padding: 6px 10px !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+      }
+
+      .regional-banner-title {
+        font-size: 0.88rem !important;
+      }
+
+      .regional-banner-text {
+        font-size: 0.74rem !important;
+        line-height: 1.35 !important;
+      }
+
+      .aus-banner {
+        background: #eff6ff !important;
+      }
+
+      .gcc-banner {
+        background: #f0fdf4 !important;
       }
 
       .section-header {
@@ -591,15 +639,29 @@
           </p>
         </header>
 
-        <!-- Saudi Arabia & GCC Banner (Mentioned First) -->
-        <div class="gcc-banner">
-          <div class="gcc-banner-icon">🇸🇦</div>
-          <div>
-            <div class="gcc-banner-title">
-              Specialized for Saudi Arabia (KSA) &amp; the GCC Market
+        <!-- Regional Specializations: Australia & Saudi Arabia / GCC -->
+        <div class="regional-grid">
+          <div class="regional-banner aus-banner">
+            <div class="regional-banner-icon">🇦🇺</div>
+            <div>
+              <div class="regional-banner-title">
+                Australia · RTOs &amp; Education Track Record
+              </div>
+              <div class="regional-banner-text">
+                Trusted by Australian institutes: <strong>BCTA</strong> (bcta.vic.edu.au), <strong>Practical Pathways</strong> (pracpathways.com.au), <strong>McCarthy Learning</strong> (mccarthylearning.com.au), and <strong>Angel Institute</strong> (angelinstitute.edu.au) for website management, enrollment marketing &amp; course SEO.
+              </div>
             </div>
-            <div class="gcc-banner-text">
-              We build websites and online stores customized specifically for businesses in <strong>Riyadh, Jeddah, Dammam, and the UAE</strong>. Includes full integration with local payment gateways (<strong>Mada, Apple Pay, Tabby, Tamara, STC Pay</strong>), local courier shipping (SMSA, Aramex), VAT compliance, and flawless Arabic &amp; English bilingual design.
+          </div>
+
+          <div class="regional-banner gcc-banner">
+            <div class="regional-banner-icon">🇸🇦</div>
+            <div>
+              <div class="regional-banner-title">
+                Saudi Arabia (KSA) &amp; GCC Market
+              </div>
+              <div class="regional-banner-text">
+                Custom-built for <strong>Riyadh, Jeddah &amp; UAE</strong>. Integrated with Saudi payments (<strong>Mada, Tabby, Tamara, Apple Pay</strong>), local couriers (SMSA, Aramex), and bilingual Arabic/English.
+              </div>
             </div>
           </div>
         </div>
@@ -831,7 +893,7 @@
 
       <!-- Page 2 Footer Meta -->
       <div class="page-footer-meta">
-        <div>DeployMedia · Markets: Saudi Arabia · UAE · US · UK</div>
+        <div>DeployMedia · Markets: Australia · Saudi Arabia · UAE · US · UK</div>
         <div>Page 2 of 2</div>
       </div>
     </div>

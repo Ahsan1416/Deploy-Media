@@ -597,6 +597,36 @@ export const allServicesCatalog: Record<string, ServiceDetail> = {
   },
 
   // MARKETS & INDUSTRIES
+  "australia": {
+    slug: "australia",
+    category: "markets-industries",
+    categoryLabel: "MARKETS & INDUSTRIES",
+    title: "Australia (RTOs & Education)",
+    subtitle: "Melbourne, Sydney, Victoria & National",
+    iconName: "MapPin",
+    heroHeadline: "Web Engineering, SEO & Student Acquisition for Australian RTOs",
+    heroDescription: "Specialized website management, high-ranking course SEO, and qualified student enrollment acquisition for Australian Registered Training Organisations (RTOs) including BCTA, Practical Pathways, McCarthy Learning, and Angel Institute of Technology.",
+    metrics: [
+      { value: "4+ RTOs", label: "Colleges Managed" },
+      { value: "Top 3", label: "Google Rankings" },
+      { value: "ASQA-Ready", label: "Compliant Web Architecture" },
+      { value: "3.6x", label: "Student Inquiries Lift" },
+    ],
+    deliverables: [
+      { title: "RTO Website Management & Maintenance", desc: "Fast, secure, mobile-first web platforms built for course enrolments, compliance, and seamless course brochure downloads." },
+      { title: "High-Intent Student Enrollment SEO", desc: "Dominating competitive course search terms across Melbourne, Sydney, and Australia nationwide (CPC, CHC, BSB qualification codes)." },
+      { title: "Google Ads & Meta Student Funnels", desc: "High-converting lead generation funnels capturing qualified local and international student applications." },
+      { title: "LMS & Student Management Integration", desc: "Connecting website inquiry and enrollment forms directly to SMS/CRMs (aXcelerate, VETtrak, HubSpot) with automated team alerts." },
+    ],
+    whyUs: [
+      "Proven track record managing digital operations for Australian RTOs like BCTA (bcta.vic.edu.au), Practical Pathways (pracpathways.com.au), McCarthy Learning (mccarthylearning.com.au), and Angel Institute of Technology (angelinstitute.edu.au).",
+    ],
+    techStack: ["WordPress", "Next.js", "Google Search Ads", "Local SEO AU", "aXcelerate / VETtrak Webhooks", "Meta Ads"],
+    faqs: [
+      { q: "Which Australian RTOs have you worked with?", a: "We have proudly managed websites, marketing, and SEO for BCTA (bcta.vic.edu.au), Practical Pathways (pracpathways.com.au), McCarthy Learning (mccarthylearning.com.au), and Angel Institute of Technology (angelinstitute.edu.au)." },
+      { q: "How do you help RTOs increase course enrolments?", a: "By combining lightning-fast course page load speeds, high-intent local SEO for accredited course codes, and Google Search campaigns that filter out low-intent inquiries." },
+    ],
+  },
   "saudi-arabia": {
     slug: "saudi-arabia",
     category: "markets-industries",
